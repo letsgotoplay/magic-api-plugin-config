@@ -1,39 +1,73 @@
 # magic-api-plugin-config
 
-#### 介绍
-用于magic-api 的配置文件插件
-支持在线添加并热加载配置文件
-对env对象扩展，支持代码中动态插入配置
-
-#### 软件架构
-软件架构说明
+# 介绍
+- 用于[magic-api](https://gitee.com/ssssssss-team/magic-api) 的配置文件插件
+- 支持在线添加并热加载配置文件
+- 对env对象扩展,支持代码中动态插入配置
 
 
-#### 安装教程
+# 部署步骤
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## maven编译
+```cmd
+ mvn clean install
+```
+## pom引入
+```xml
+<!-- 邮件 -->
+<dependency>
+    <groupId>cn.luow</groupId>
+    <artifactId>magic-api-plugin-config</artifactId>
+    <version>2.0.0-beta.2</version>
+</dependency>
+```
+# 使用说明
 
-#### 使用说明
+### 给需要热加载配置的类添加注解@RefreshScope
+```java
+@Service
+@RefreshScope
+public class TestService {
+  @Value("${test}")
+  private String test;
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+  @Value("${testArr}")
+  private List<String> testArr;
 
-#### 参与贡献
+  public String getTest() {
+    return test;
+  }
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+  public List<String> getTestArr() {
+    return testArr;
+  }
+}
+```
+### 创建一个配置文件，添加相关配置，勾上启用后保存
+![](https://luow.fun:5305/uploads/big/ffa3b62b31f2bbc32d0633370ec3e670.png)
+### 测试配置文件是否生效
+![](https://luow.fun:5305/uploads/big/3a295295a187c0a819621ef9f24ee18d.png)
+
+#脚本中动态配置
+```javascript
+env.set("test","testSet");
+
+var yml = """
+test : testYmal
+test1:
+    test2: 123
+test3:
+    test2:
+        - 12
+        - 123
+        - 12314
+"""
+env.setYaml(yml,"testYaml");
+```
+
+- 配置文件刷新需要时间，并不是实时的
+- 配置文件拥有覆盖性，后加载的覆盖之前的
+- 后加载的配置禁用之后，之前被覆盖的配置依旧会生效
 
 
-#### 特技
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
