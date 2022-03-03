@@ -14,7 +14,7 @@
 ```
 ## pom引入
 ```xml
-<!-- 邮件 -->
+<!-- 配置文件 -->
 <dependency>
     <groupId>cn.luow</groupId>
     <artifactId>magic-api-plugin-config</artifactId>
