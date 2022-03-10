@@ -27,13 +27,13 @@
             <version>3.1.1</version>
         </dependency>
     </dependencies>
-    <repositories>
-        <repository>
-            <id>ssssssss-maven-public</id>
-            <name>ssssssss-maven-public</name>
-            <url>https://maven.ssssssss.org.cn/repository/maven-public/</url>
-        </repository>
-    </repositories>
+<!--    <repositories>-->
+<!--        <repository>-->
+<!--            <id>ssssssss-maven-public</id>-->
+<!--            <name>ssssssss-maven-public</name>-->
+<!--            <url>https://maven.ssssssss.org.cn/repository/maven-public/</url>-->
+<!--        </repository>-->
+<!--    </repositories>-->
 
     <build>
         <plugins>
