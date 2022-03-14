@@ -18,7 +18,7 @@
 <dependency>
     <groupId>cn.luow</groupId>
     <artifactId>magic-api-plugin-config</artifactId>
-    <version>2.0.0-beta.2</version>
+    <version>2.0.0</version>
 </dependency>
 ```
 # 使用说明
