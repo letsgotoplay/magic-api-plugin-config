@@ -1,0 +1,6 @@
+/Users/yuli/git/opensource/magic-api-plugin-config/src/main/java/cn/luow/config/starter/MagicAPIConfConfiguration.java
+/Users/yuli/git/opensource/magic-api-plugin-config/src/main/java/cn/luow/config/web/MagicConfigController.java
+/Users/yuli/git/opensource/magic-api-plugin-config/src/main/java/cn/luow/config/service/ConfigMagicResourceStorage.java
+/Users/yuli/git/opensource/magic-api-plugin-config/src/main/java/cn/luow/config/service/ConfigMagicDynamicRegistry.java
+/Users/yuli/git/opensource/magic-api-plugin-config/src/main/java/cn/luow/config/model/ConfigInfo.java
+/Users/yuli/git/opensource/magic-api-plugin-config/src/main/java/cn/luow/config/service/EnvFunctionExtension.java

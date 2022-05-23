@@ -1,0 +1,6 @@
+cn/luow/config/service/ConfigMagicResourceStorage.class
+cn/luow/config/service/ConfigMagicDynamicRegistry.class
+cn/luow/config/starter/MagicAPIConfConfiguration.class
+cn/luow/config/model/ConfigInfo.class
+cn/luow/config/web/MagicConfigController.class
+cn/luow/config/service/EnvFunctionExtension.class
